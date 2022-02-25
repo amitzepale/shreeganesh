@@ -5,11 +5,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="home.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Insert title here</title>
 </head>
 <body>
 	<section>
-		<div class="navbar">
+		<div class="navbar" id="mynav">
 		<img class="avtar" src="ganesh_logo.jpeg">
 		<div class="navigation">
 		<a href="">Home</a>
@@ -31,15 +32,22 @@
 		<a href="">Contact Us</a>
 		<a href="">About</a>
 		<a href="login.jsp">Login</a>
+		</a>
 		</div>
 		</div>
 	</section>
 	
 	<section>
-		<div class="main">
-		
-		
+		<div class="slide" style="width:100%">
+		  <img class="mySlides" src="mens-jeans.jpg" style="width:100%">
+		  <img class="mySlides" src="istockphoto-665032164-170667a.jpg" style="width:100%">
+		  <img class="mySlides" src="basics.jpg" style="width:100%">
 		</div>
 	</section>
+	
+	<script>
+	
+	</script>
+
 </body>
 </html>
