@@ -11,9 +11,9 @@
 <body>
 	<section>
 		<div class="navbar" id="mynav">
-		<img class="avtar" src="ganesh_logo.jpeg">
+		<a href="login.jsp" class="avtar"><img class="avtar" src="ganesh_logo.jpeg"></a>
 		<div class="navigation">
-		<a href="">Home</a>
+		<a href="home.jsp">Home</a>
 			<div class="dropdown">
 			<a href="">Product</a>
 				<div class="dropdown-content">
@@ -29,19 +29,37 @@
 		 			<div class="desc"><a href="">T-shirt</a></div>
 		  		</div>
   		</div>
-		<a href="">Contact Us</a>
-		<a href="">About</a>
-		<a href="login.jsp">Login</a>
+		<a href="contact.jsp">Contact Us</a>
+		<a href="about.jsp">About</a>
 		</div>
 		</div>
 	</section>
 	
 	<section>
-		<div class="slide">
-		  <img class="mySlides" src="classic-men-s-shirts-stacked-four-pile-white-background-81700475.jpg">
-		  <img class="mySlides" src="istockphoto-665032164-170667a.jpg">
-		  <img class="mySlides" src="basics.jpg">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+			  <img src="basics.jpg" style="width:100%; height: 500px;">
+			  <div class="text">BUY 999</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <img src="classic-men-s-shirts-stacked-four-pile-white-background-81700475.jpg" style="width:100%; height: 500px;">
+			  <div class="text">BUY 999</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <img src="IMG_0975.jpg" style="width:100%; height: 500px;">
+			  <div class="text">BUY 999</div>
+			</div>
+		
 		</div>
+		
+		<div style="text-align:center">
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		</div>
+
 	</section>
 		
 		<section>
@@ -50,20 +68,25 @@
 			</div>
 		</section>
 	<script>
-	var myIndex = 0;
-	carousel();
-
-	function carousel() {
-	  var i;
-	  var x = document.getElementsByClassName("mySlides");
-	  for (i = 0; i < x.length; i++) {
-	    x[i].style.display = "none";  
-	  }
-	  myIndex++;
-	  if (myIndex > x.length) {myIndex = 1}    
-	  x[myIndex-1].style.display = "block";  
-	  setTimeout(carousel, 2000); // Change image every 2 seconds
-	}
+		var slideIndex = 0;
+		showSlides();
+		
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 2000); // Change image every 2 seconds
+		}
 	</script>
 
 </body>
