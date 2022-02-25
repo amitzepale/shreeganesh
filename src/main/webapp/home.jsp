@@ -32,21 +32,38 @@
 		<a href="">Contact Us</a>
 		<a href="">About</a>
 		<a href="login.jsp">Login</a>
-		</a>
 		</div>
 		</div>
 	</section>
 	
 	<section>
-		<div class="slide" style="width:100%">
-		  <img class="mySlides" src="mens-jeans.jpg" style="width:100%">
-		  <img class="mySlides" src="istockphoto-665032164-170667a.jpg" style="width:100%">
-		  <img class="mySlides" src="basics.jpg" style="width:100%">
+		<div class="slide">
+		  <img class="mySlides" src="classic-men-s-shirts-stacked-four-pile-white-background-81700475.jpg">
+		  <img class="mySlides" src="istockphoto-665032164-170667a.jpg">
+		  <img class="mySlides" src="basics.jpg">
 		</div>
 	</section>
-	
+		
+		<section>
+			<div class="boxes">
+				
+			</div>
+		</section>
 	<script>
-	
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";  
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}    
+	  x[myIndex-1].style.display = "block";  
+	  setTimeout(carousel, 2000); // Change image every 2 seconds
+	}
 	</script>
 
 </body>
