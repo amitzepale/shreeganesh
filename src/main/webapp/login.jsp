@@ -15,7 +15,7 @@
 
 				<form action="<%=request.getContextPath()%>/loginServlet" method="post">
 					<label>EMAIL</label>
-					<input type="email" name="username" placeholder="Enter Username">
+					<input type="text" name="username" placeholder="Enter Email">
 
 					<label>PASSWORD</label>
 					<input type="password" name="password" placeholder="Enter Password">
