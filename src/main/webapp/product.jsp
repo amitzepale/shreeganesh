@@ -174,9 +174,10 @@ input[type="reset"]{
 </head>
 <body>
 	<form action="">
-	<section>
+	
+<section>
 		<div class="navbar" id="mynav">
-		<a href="login.jsp" class="avtar"><img class="avtar" src="ganesh_logo.jpeg"></a>
+		<img class="avtar" src="ganesh_logo.jpeg">
 		<div class="navigation">
 		<a href="adminHome.jsp">Home</a>
 		<a href="product.jsp">Product Manage</a>

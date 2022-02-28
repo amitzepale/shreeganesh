@@ -24,7 +24,7 @@
 					<input type="submit" name="" value="LOGIN" class="btn">
 
 					<a href="">Lost Your Password..?</a>
-					<a href="home.jsp">Home Page</a>
+					<a href="home.jsp" style="color: blue; float: right">--Home--</a>
 				</form>
 		    </div>
 	</section>

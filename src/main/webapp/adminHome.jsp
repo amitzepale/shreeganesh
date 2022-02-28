@@ -132,7 +132,7 @@ img {
 <body>
 		<section>
 		<div class="navbar" id="mynav">
-		<a href="login.jsp" class="avtar"><img class="avtar" src="ganesh_logo.jpeg"></a>
+		<a href="" class="avtar"><img class="avtar" src="ganesh_logo.jpeg"></a>
 		<div class="navigation">
 		<a href="adminHome.jsp">Home</a>
 		<a href="product.jsp">Product Manage</a>

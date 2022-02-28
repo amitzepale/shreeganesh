@@ -57,9 +57,10 @@ input[type="text"], input[type="password"]
 @keyframes mymove {
   50% {border-bottom-color: lightblue;}
 }
-input[type="submit"]{
+.loginbox input[type="submit"]{
 	border: none;
 	outline: none;
+	width: 120px;
 	height: 40px;
 	background: orange;
 	font-size: 18px;
@@ -77,6 +78,11 @@ input[type="submit"]{
 	background: blue;
 	color: white;
 	
+}
+.loginbox input[type="reset"]:hover{
+	cursor: pointer;
+	background: red;
+	color: white;
 }
 .loginbox a{
 	padding: 3px 4px;
