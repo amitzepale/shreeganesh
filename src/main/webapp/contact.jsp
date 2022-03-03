@@ -6,11 +6,15 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style type="text/css">
-body {
-padding: 0;
-  margin: 0;
-  background: #3456;
-  font-size: 12px;
+<style type="text/css">
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	position: absolute;
+	font-family: sans-serif;
 }
 .navbar{
 	margin: 0;
@@ -29,7 +33,7 @@ padding: 0;
 	margin: 0;
 	padding: 0;
 	width:200px;
-	height:50px;
+	height:60px;
 }
 .navigation{
 	margin: -5px;
@@ -76,236 +80,101 @@ a{
 .desc:hover a{
 	color: #000080;
 }
-body, button, input, textarea  {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  position: relative;
+.main{
+	width: 420px;
+	height: 500px;
+	background: transparent;
+	color: #000040;
+	top: 40%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
 }
-.background {
-  display: flex;
-  min-height: 100vh;
+h1{
+	margin: 0;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
 }
-
-.container {
-	width: 800px;
-  flex: 0 1 700px;
-  margin: auto;
-  padding: 150px 100px 0 100px;
+.product{
+	font-weight: bold;
 }
-
-.screen {
-  position: relative;
-  background: #3e3e3e;
-  border-radius: 15px;
+input{
+	width: 100%;
+	margin-bottom: 20px;
 }
-
-.screen:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-  z-index: -1;
-}
-
-.screen-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background: #4d4d4f;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+textarea{
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 18px;
+	color: black;
+	border: none;
+	border-bottom: 1px solid black;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	animation: mymove 3s infinite;
 }
 
-.screen-header-left {
-  margin-right: auto;
+input[type="text"]
+{
+	font-size: 18px;
+	color: black;
+	border: none;
+	border-bottom: 1px solid black;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	animation: mymove 3s infinite;
 }
-
-.screen-header-button {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 3px;
-  border-radius: 8px;
-  background: white;
+@keyframes mymove {
+  50% {border-bottom-color: lightblue;}
 }
-
-.screen-header-button.close {
-  background: #ed1c6f;
+input[type="submit"]{
+	border: none;
+	outline: none;
+	width: 120px;
+	height: 40px;
+	background: orange;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+	transition: 0.3sec;
+	border-bottom: 2px solid black;
+	animation: mymove 3s infinite;
 }
-
-.screen-header-button.maximize {
-  background: #e8e925;
+input[type="reset"]{
+	border: none;
+	outline: none;
+	width: 120px;
+	height: 40px;
+	background: orange;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+	transition: 0.3sec;
+	border-bottom: 2px solid black;
+	animation: mymove 3s infinite;
 }
-
-.screen-header-button.minimize {
-  background: #74c54f;
+@keyframes mymove {
+  50% {border-bottom-color: blue;}
 }
-
-.screen-header-right {
-  display: flex;
+.main input[type="submit"]:hover{
+	cursor: pointer;
+	background: blue;
+	color: white;	
 }
-
-.screen-header-ellipsis {
-  width: 3px;
-  height: 3px;
-  margin-left: 2px;
-  border-radius: 8px;
-  background: #999;
+.main input[type="reset"]:hover{
+	cursor: pointer;
+	background: red;
+	color: white;	
 }
-
-.screen-body {
-  display: flex;
-}
-
-.screen-body-item {
-  flex: 1;
-  padding: 50px;
-}
-
-.screen-body-item.left {
-  display: flex;
-  flex-direction: column;
-}
-
-.app-title {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  color: #ea1d6f;
-  font-size: 26px;
-}
-
-.app-title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25px;
-  height: 4px;
-  background: #ea1d6f;
-}
-
-.app-contact {
-  margin-top: auto;
-  font-size: 13px;
-  color: #888;
-}
-
-.app-form-group {
-  margin-bottom: 15px;
-}
-
-.app-form-group.message {
-  margin-top: 40px;
-}
-
-.app-form-group.buttons {
-  margin-bottom: 0;
-  text-align: right;
-}
-
-.app-form-control {
-  width: 100%;
-  padding: 10px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #666;
-  color: #ddd;
-  font-size: 14px;
-  text-transform: uppercase;
-  outline: none;
-  transition: border-color .2s;
-}
-
-.app-form-control::placeholder {
-  color: #666;
-}
-
-.app-form-control:focus {
-  border-bottom-color: #ddd;
-}
-
-.app-form-button {
-  background: none;
-  border: none;
-  color: #ea1d6f;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
-}
-
-.app-form-button:hover {
-  color: #b9134f;
-}
-
-.credits {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  color: #ffa4bd;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.credits-link {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.dribbble {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-}
-
-@media screen and (max-width: 520px) {
-  .screen-body {
-    flex-direction: column;
-  }
-
-  .screen-body-item.left {
-    margin-bottom: 30px;
-  }
-
-  .app-title {
-    flex-direction: row;
-  }
-
-  .app-title span {
-    margin-right: 12px;
-  }
-
-  .app-title:after {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .screen-body {
-    padding: 40px;
-  }
-
-  .screen-body-item {
-    padding: 0;
-  }
-}
-	
 </style>
 </head>
 <body>
-<form action="<%=request.getContextPath()%>/contact_servlet" method="post">
+	<form action="<%=request.getContextPath()%>/contact_servlet" method="post">
 		<section>
 		<div class="navbar" id="mynav">
 		<a href="login.jsp" class="avtar"><img class="avtar" src="ganesh_logo.jpeg"></a>
@@ -331,40 +200,26 @@ body, button, input, textarea  {
 		</div>
 		</div>
 	</section>
-		
-		  <div class="container">
-		    <div class="screen">
-		      <div class="screen-body">
-		        <div class="screen-body-item left">
-		          <div class="app-title">
-		            <span>CONTACT</span>
-		            <span>US</span>
-		          </div>
-		          <div class="app-contact">CONTACT INFO : 9594664361</div>
-		        </div>
-		        <div class="screen-body-item">
-		          <div class="app-form">
-		            <div class="app-form-group">
-		              <input type="text" class="app-form-control" placeholder="FUll NAME" name="name" required/>
-		            </div>
-		            <div class="app-form-group">
-		              <input type="email" class="app-form-control" placeholder="EMAIL" name="email" required/>
-		            </div>
-		            <div class="app-form-group">
-		              <input type="text" class="app-form-control" placeholder="CONTACT NO" name="number" required/>
-		            </div>
-		            <div class="app-form-group message">
-		              <textarea class="app-form-control" placeholder="MESSAGE" rows="4" cols="50" name="comment" form="usrform" required/></textarea>
-		            </div>
-		            <div class="app-form-group buttons">
-		            	 <button class="app-form-button">SEND</button>
-		              <button class="app-form-button">CANCEL</button>
-		            </div>
-		          </div>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-</form>
+	
+		<div class="main">
+			<h1> CONTACT US</h1>
+			<div class="product">
+			<label>Full Name</label>
+				<input type="text" name="name" placeholder="Enter Full Name">
+				
+			<label>Email</label>
+				<input type="text" name="email" placeholder="Enter Email">
+				
+				<label>Mobile</label>
+				<input type="text" name="number" placeholder="Enter Mobile No.">
+				
+			<label>Message</label>
+				<textarea placeholder="Enter Message" rows="5" cols="50" name="comment"></textarea>
+			
+			</div>
+			<input type="submit" value="Submit">
+			<input type="reset" value="Cancel" onclick="alert('Confirm')">
+		</div>
+	</form>
 </body>
 </html>

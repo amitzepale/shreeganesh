@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class contactDao {
 	
 	public int cont(contact_getset contact) throws ClassNotFoundException{
-		String sql = "INSERT INTO `contact`(`id`, `name`, `email`, `number`, `coment`) VALUES(?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO `contact`(`id`, `name`, `email`, `number`, `comment`) VALUES (?, ?, ?, ?, ?)";
 		int result=0;
 		
 		Class.forName("com.mysql.jdbc.Driver");
@@ -19,7 +19,9 @@ public class contactDao {
 			ps.setString(3, contact.getEmail());
 			ps.setString(4, contact.getNumber());
 			ps.setString(5, contact.getComment());
+			
 			result = ps.executeUpdate();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
