@@ -98,7 +98,7 @@ input[type="text"]
 @keyframes mymove {
   50% {border-bottom-color: lightblue;}
 }
-button[type="button"]{
+input[type="submit"]{
 	border: none;
 	outline: none;
 	width: 120px;
@@ -127,7 +127,7 @@ input[type="reset"]{
 @keyframes mymove {
   50% {border-bottom-color: blue;}
 }
-.main button[type="button"]:hover{
+.main input[type="submit"]:hover{
 	cursor: pointer;
 	background: blue;
 	color: white;	
@@ -140,7 +140,7 @@ input[type="reset"]{
 </style>
 </head>
 <body>
-	<form action="">
+	<form action="<%=request.getContextPath()%>/product_servlet" method="post">
 	
 <section>
 		<div class="navbar" id="mynav">
@@ -158,27 +158,21 @@ input[type="reset"]{
 			<h1> PRODUCT MANAGE</h1>
 			<div class="product">
 			<label>Product Name</label>
-				<input type="text" name="" placeholder="Product Name">
+				<input type="text" name="product_name" placeholder="Product Name">
 				
 			<label>Product Price</label>
-				<input type="text" name="" placeholder="Product Name">
+				<input type="text" name="product_price" placeholder="Product Price">
 				
 			<label>Product Description</label>
-				<textarea placeholder="Product Description" rows="5" cols="50"></textarea>
+				<textarea placeholder="Product Description" rows="5" cols="50" name="product_description"></textarea>
 				
 			<label>Product Image</label>
-				<input type="file" name="" placeholder="Choose Image">
+				<input type="file" name="product_image" placeholder="Choose Image">
 			
 			</div>
-			<button type="button" onclick="myFunction()">Okay</button>
-			<input type="reset" value="cancel" onclick="alert('Confirm')">
+			<input type="submit" value="Submit">
+			<input type="reset" value="Cancel" onclick="alert('Confirm')">
 		</div>
 	</form>
-	
-	<script>
-		function myFunction() {
-  			location.replace("login.jsp")
-		}
-	</script>
 </body>
 </html>

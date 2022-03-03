@@ -305,7 +305,7 @@ body, button, input, textarea  {
 </style>
 </head>
 <body>
-<form action=""> 
+<form action="<%=request.getContextPath()%>/contact_servlet" method="post">
 		<section>
 		<div class="navbar" id="mynav">
 		<a href="login.jsp" class="avtar"><img class="avtar" src="ganesh_logo.jpeg"></a>
@@ -345,20 +345,20 @@ body, button, input, textarea  {
 		        <div class="screen-body-item">
 		          <div class="app-form">
 		            <div class="app-form-group">
-		              <input type="text" class="app-form-control" placeholder="NAME" required/>
+		              <input type="text" class="app-form-control" placeholder="FUll NAME" name="name" required/>
 		            </div>
 		            <div class="app-form-group">
-		              <input type="email" class="app-form-control" placeholder="EMAIL" required/>
+		              <input type="email" class="app-form-control" placeholder="EMAIL" name="email" required/>
 		            </div>
 		            <div class="app-form-group">
-		              <input type="text" class="app-form-control" placeholder="CONTACT NO" required/>
+		              <input type="text" class="app-form-control" placeholder="CONTACT NO" name="number" required/>
 		            </div>
 		            <div class="app-form-group message">
 		              <textarea class="app-form-control" placeholder="MESSAGE" rows="4" cols="50" name="comment" form="usrform" required/></textarea>
 		            </div>
 		            <div class="app-form-group buttons">
+		            	 <button class="app-form-button">SEND</button>
 		              <button class="app-form-button">CANCEL</button>
-		              <button class="app-form-button">SEND</button>
 		            </div>
 		          </div>
 		        </div>
