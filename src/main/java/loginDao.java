@@ -1,26 +1,28 @@
 import java.sql.*;
 public class loginDao {
 
-	public boolean vali(getset ge) throws ClassNotFoundException{
-		
-		boolean status=false;
-		
-		Class.forName("com.mysql.jdbc.Driver");
-		try{
-			
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/akshay?useSSL=false","root","");
-			String sql = "SELECT * FROM LOGIN username= ? AND password= ?";
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, ge.getUsername());
-			ps.setString(2, ge.getPassword());
-			
-			ResultSet rs = ps.executeQuery();
-			status = rs.next();
-			
-		}catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		return status;
-	}
+	public boolean validate(getset loginBean) throws ClassNotFoundException {
+        boolean status = false;
+
+        Class.forName("com.mysql.jdbc.Driver");
+
+        try (Connection connection = DriverManager
+            .getConnection("jdbc:mysql://localhost:3306/akshay?useSSL=false", "root", "");
+
+            // Step 2:Create a statement using connection object
+            PreparedStatement preparedStatement = connection
+            .prepareStatement("select * from login where username = ? and password = ? ")) {
+            preparedStatement.setString(1, loginBean.getUsername());
+            preparedStatement.setString(2, loginBean.getPassword());
+
+            System.out.println(preparedStatement);
+            ResultSet rs = preparedStatement.executeQuery();
+            status = rs.next();
+
+        } catch (SQLException e) {
+            // process sql exception
+          e.printStackTrace();
+        }
+        return status;
+    }
 }

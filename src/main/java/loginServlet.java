@@ -11,15 +11,15 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class loginServlet
  */
-@WebServlet("/loginServlet")
+@WebServlet("/login")
 public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private loginDao login;
-	public void init()
-	{
-		login = new loginDao();
-	}
+	private loginDao log;
+
+    public void init() {
+        log = new loginDao();
+    }
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -43,25 +43,23 @@ public class loginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		
-		getset ge = new getset();
-		ge.setUsername(username);
-		ge.setPassword(password);
-		
-		 try {
-	            if (login.vali(ge)) {
-	                HttpSession session = request.getSession();
-	                session.setAttribute("username",username);
-	                response.sendRedirect("home.jsp");
-	            } else {
-	                HttpSession session = request.getSession();
-	                session.setAttribute("user", username);
-	                response.sendRedirect("login.jsp");
-	            }
-	        } catch (ClassNotFoundException e) {
-	            e.printStackTrace();
-	        }
-	}
+        String password = request.getParameter("password");
+        getset loginBean = new getset();
+        loginBean.setUsername(username);
+        loginBean.setPassword(password);
 
+        try {
+            if (log.validate(loginBean)) {
+                //HttpSession session = request.getSession();
+                // session.setAttribute("username",username);
+                response.sendRedirect("adminHome.jsp");
+            } else {
+                HttpSession session = request.getSession();
+                //session.setAttribute("user", username);
+                response.sendRedirect("login.jsp");
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }

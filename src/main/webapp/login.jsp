@@ -13,7 +13,7 @@
 				<img src="ganesh_logo.jpeg" class="avtar">
 				<h1>LOGIN HERE</h1>
 
-				<form action="<%=request.getContextPath()%>/loginServlet" method="post">
+				<form action="<%=request.getContextPath()%>/login" method="post">
 					<label>EMAIL</label>
 					<input type="text" name="username" placeholder="Enter Email">
 
@@ -21,9 +21,9 @@
 					<input type="password" name="password" placeholder="Enter Password">
 
 
-					<input type="submit" name="" value="LOGIN" class="btn">
+					<input type="submit" name="" value="LOGIN">
 
-					<a href="">Lost Your Password..?</a>
+					<a href="forgot.jsp">Lost Your Password..?</a>
 					<a href="home.jsp" style="color: blue; float: right">--Home--</a>
 				</form>
 		    </div>

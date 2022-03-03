@@ -13,6 +13,5 @@ public class getset {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	
+	}	
 }

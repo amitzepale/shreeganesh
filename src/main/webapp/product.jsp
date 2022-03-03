@@ -46,39 +46,6 @@ a{
 	font-weight:bold;
 	transition: 0.3sec;
 }
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-a{
-	float: 40px;
-}
-.dropdown-content {
-	padding: 10px;
-	margin: 30px 0 0 -30px;
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.desc {
-  padding: 0;
-  margin-top: 0;
-  text-align: center;
-}
-.desc a{
-	color: blue;
-	font-size: 18px;
-	font-family: sans-serif;
-	transition: 0.3sec;
-}
-.desc:hover a{
-	color: #000080;
-}
 .main{
 	width: 420px;
 	height: 500px;
@@ -179,9 +146,9 @@ input[type="reset"]{
 		<div class="navbar" id="mynav">
 		<img class="avtar" src="ganesh_logo.jpeg">
 		<div class="navigation">
-		<a href="adminHome.jsp">Home</a>
 		<a href="product.jsp">Product Manage</a>
 		<a href="contact.jsp">Contact Us</a>
+		<a href="adminHome.jsp">Home</a>
 		<a href="login.jsp" style=" color: red;">Logout</a>
 		</div>
 		</div>
@@ -197,7 +164,7 @@ input[type="reset"]{
 				<input type="text" name="" placeholder="Product Name">
 				
 			<label>Product Description</label>
-				<textarea placeholder="Product Description" rows="4" cols="50"></textarea>
+				<textarea placeholder="Product Description" rows="5" cols="50"></textarea>
 				
 			<label>Product Image</label>
 				<input type="file" name="" placeholder="Choose Image">
