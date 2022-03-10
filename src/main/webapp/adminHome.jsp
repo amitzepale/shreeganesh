@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Home</title>
 <style type="text/css">
-	body{
+body{
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -132,11 +132,25 @@ img {
 <body>
 		<section>
 		<div class="navbar" id="mynav">
-		<a href="" class="avtar"><img class="avtar" src="ganesh_logo.jpeg"></a>
+		<img class="avtar" src="ganesh_logo.jpeg">
 		<div class="navigation">
-		<a href="adminHome.jsp">Home</a>
-		<a href="product.jsp">Product Manage</a>
-		<a href="contact.jsp">Contact Us</a>
+		<a href="#">Home</a>
+			<div class="dropdown">
+			<a href="#">Product</a>
+				<div class="dropdown-content">
+		 			<img src="4810111.png" alt="Cinque Terre" width="50" height="50">
+		 			<div class="desc"><a href="">3/4</a></div>
+		 			<img src="5077979.png" alt="Cinque Terre" width="50" height="50">
+		 			<div class="desc"><a href="">Sandow</a></div>
+		 			<img src="jeans-icon-noto-emoji-clothing-objects-iconset-google-893246.png" alt="Cinque Terre" width="50" height="50">
+		 			<div class="desc"><a href="">Jeans</a></div>
+		 			<img src="sticker-template-with-casual-shorts-isolated_1308-61526.jpg" alt="Cinque Terre" width="50" height="50">
+		 			<div class="desc"><a href="">Short Pants</a></div>
+		 			<img src="t-shirt-59.png" alt="Cinque Terre" width="50" height="50">
+		 			<div class="desc"><a href="">T-shirt</a></div>
+		  		</div>
+  		</div>
+		<a href="#">Delete Product</a>
 		<a href="login.jsp" style=" color: red;">Logout</a>
 		</div>
 		</div>

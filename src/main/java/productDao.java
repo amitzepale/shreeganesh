@@ -6,15 +6,15 @@ import java.sql.SQLException;
 public class productDao {
 	
 	public int pro(product_getset product) throws ClassNotFoundException{
-		String sql = "INSERT INTO `product_manager`(`id`, `product_name`, `product_price`, `product_description`, `product_image`) VALUES (?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO `jeans`(`id`, `product_name`, `product_price`, `product_description`, `product_image`) VALUES (?, ?, ?, ?, ?)";
 		int result=0;
 		
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		try {
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/akshay","root","");
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, 1);
+			ps.setInt(1,0);
 			ps.setString(2, product.getProduct_name());
 			ps.setString(3, product.getProduct_price());
 			ps.setString(4, product.getProduct_description());
