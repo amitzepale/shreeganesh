@@ -56,7 +56,7 @@ public class short_pantservlrt extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-		response.sendRedirect("sandow.jsp");
+		response.sendRedirect("short_pants.jsp");
 	}
 
 }

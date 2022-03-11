@@ -134,23 +134,25 @@ img {
 		<div class="navbar" id="mynav">
 		<img class="avtar" src="ganesh_logo.jpeg">
 		<div class="navigation">
-		<a href="#">Home</a>
+		<a href="">Home</a>
 			<div class="dropdown">
-			<a href="#">Product</a>
+			<a href="">Product</a>
 				<div class="dropdown-content">
 		 			<img src="4810111.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">3/4</a></div>
+		 			<div class="desc"><a href="three_forth.jsp">Three/Forth</a></div>
 		 			<img src="5077979.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">Sandow</a></div>
+		 			<div class="desc"><a href="sandow.jsp">Sandow</a></div>
 		 			<img src="jeans-icon-noto-emoji-clothing-objects-iconset-google-893246.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">Jeans</a></div>
+		 			<div class="desc"><a href="jeans.jsp">Jeans</a></div>
 		 			<img src="sticker-template-with-casual-shorts-isolated_1308-61526.jpg" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">Short Pants</a></div>
+		 			<div class="desc"><a href="short_pants.jsp">Short Pants</a></div>
 		 			<img src="t-shirt-59.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">T-shirt</a></div>
+		 			<div class="desc"><a href="t-shirt.jsp">T-shirt</a></div>
+		 			<img src="blue-mens-shirt.jpg" alt="Cinque Terre" width="50" height="50">
+		 			<div class="desc"><a href="">Shirt</a></div>
 		  		</div>
   		</div>
-		<a href="#">Delete Product</a>
+		<a href="remove_product.jsp">Remove Product</a>
 		<a href="login.jsp" style=" color: red;">Logout</a>
 		</div>
 		</div>

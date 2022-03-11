@@ -14,10 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 public class Jservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	private productDao productdao;
+	private JDao Jdao;
 	public void init()
 	{
-		productdao = new productDao();
+		Jdao = new JDao();
 	}
     /**
      * @see HttpServlet#HttpServlet()
@@ -45,14 +45,14 @@ public class Jservlet extends HttpServlet {
 		String product_description = request.getParameter("product_description");
 		String product_image = request.getParameter("product_image");
 		
-		product_getset product = new product_getset();
-		product.setProduct_name(product_name);
-		product.setProduct_price(product_price);
-		product.setProduct_description(product_description);
-		product.setProduct_image(product_image);
+		J_getset jeans = new J_getset();
+		jeans.setProduct_name(product_name);
+		jeans.setProduct_price(product_price);
+		jeans.setProduct_description(product_description);
+		jeans.setProduct_image(product_image);
 		
 		try {
-            productdao.pro(product);
+            Jdao.pro(jeans);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,5 +1,6 @@
 
-public class product_getset {
+public class shirt_getset {
+
 	private String product_name;
 	private String product_price;
 	private String product_description;
@@ -28,6 +29,4 @@ public class product_getset {
 	public void setProduct_image(String product_image) {
 		this.product_image = product_image;
 	}
-
-	
 }

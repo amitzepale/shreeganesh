@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>product</title>
-<style>
+<title>Insert title here</title>
+<style type="text/css">
 body{
 	margin: 0;
 	padding: 0;
@@ -85,7 +85,7 @@ a{
 	background: transparent;
 	color: #000040;
 	top: 40%;
-	left: 50%;
+	left:45%;
 	position: absolute;
 	transform: translate(-50%,-50%);
 	box-sizing: border-box;
@@ -173,8 +173,8 @@ input[type="reset"]{
 </style>
 </head>
 <body>
-
-	<section>
+<form action="<%=request.getContextPath()%>/shirtservlet" method="post">
+<section>
 		<div class="navbar" id="mynav">
 		<img class="avtar" src="ganesh_logo.jpeg">
 		<div class="navigation">
@@ -183,42 +183,45 @@ input[type="reset"]{
 			<a href="">Product</a>
 				<div class="dropdown-content">
 		 			<img src="4810111.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">3/4</a></div>
+		 			<div class="desc"><a href="three_forth.jsp">Three/Forth</a></div>
 		 			<img src="5077979.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">Sandow</a></div>
+		 			<div class="desc"><a href="sandow.jsp">Sandow</a></div>
 		 			<img src="jeans-icon-noto-emoji-clothing-objects-iconset-google-893246.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">Jeans</a></div>
+		 			<div class="desc"><a href="jeans.jsp">Jeans</a></div>
 		 			<img src="sticker-template-with-casual-shorts-isolated_1308-61526.jpg" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">Short Pants</a></div>
+		 			<div class="desc"><a href="short_pants.jsp">Short Pants</a></div>
 		 			<img src="t-shirt-59.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="">T-shirt</a></div>
+		 			<div class="desc"><a href="t-shirt.jsp">T-shirt</a></div>
+		 			<img src="blue-mens-shirt.jpg" alt="Cinque Terre" width="50" height="50">
+		 			<div class="desc"><a href="">Shirt</a></div>
 		  		</div>
   		</div>
-		<a href="">Delete Product</a>
+		<a href="remove_product.jsp">Remove Product</a>
 		<a href="login.jsp" style=" color: red;">Logout</a>
 		</div>
 		</div>
 	</section>
-	<section>
-		<div class="main">
+	
+	<div class="main">
 			<h1> PRODUCT MANAGE</h1>
 			<div class="product">
-			<label>Product Name</label>
+			<label>Jeans Name</label>
 				<input type="text" name="product_name" placeholder="Product Name">
 				
-			<label>Product Price</label>
+			<label>Jeans Price</label>
 				<input type="text" name="product_price" placeholder="Product Price">
 				
 			<label>Product Description</label>
 				<textarea placeholder="Product Description" rows="5" cols="50" name="product_description"></textarea>
 				
-			<label>Product Image</label>
+			<label>Jeans Image</label>
 				<input type="file" name="product_image" placeholder="Choose Image">
 			
 			</div>
 			<input type="submit" value="Submit">
 			<input type="reset" value="Cancel" onclick="alert('Confirm')">
 		</div>
-		</section>
+	
+	</form>
 </body>
 </html>

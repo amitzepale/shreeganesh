@@ -193,6 +193,8 @@ input[type="reset"]{
 		 			<div class="desc"><a href="">Short Pants</a></div>
 		 			<img src="t-shirt-59.png" alt="Cinque Terre" width="50" height="50">
 		 			<div class="desc"><a href="">T-shirt</a></div>
+		 			<img src="blue-mens-shirt.jpg" alt="Cinque Terre" width="50" height="50">
+		 			<div class="desc"><a href="">Shirt</a></div>
 		  		</div>
   		</div>
 		<a href="contact.jsp">Contact Us</a>
