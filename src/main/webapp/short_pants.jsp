@@ -205,16 +205,16 @@ input[type="reset"]{
 	<div class="main">
 			<h1> PRODUCT MANAGE</h1>
 			<div class="product">
-			<label>Jeans Name</label>
+			<label>Brand Name</label>
 				<input type="text" name="product_name" placeholder="Product Name">
 				
-			<label>Jeans Price</label>
+			<label>Price</label>
 				<input type="text" name="product_price" placeholder="Product Price">
 				
 			<label>Product Description</label>
 				<textarea placeholder="Product Description" rows="5" cols="50" name="product_description"></textarea>
 				
-			<label>Jeans Image</label>
+			<label>Product Image</label>
 				<input type="file" name="product_image" placeholder="Choose Image">
 			
 			</div>
