@@ -173,7 +173,7 @@ input[type="reset"]{
 </style>
 </head>
 <body>
-<form action="<%=request.getContextPath()%>/product_servlet" method="post">
+<form action="<%=request.getContextPath()%>/Jservlet" method="post">
 <section>
 		<div class="navbar" id="mynav">
 		<img class="avtar" src="ganesh_logo.jpeg">
@@ -187,7 +187,7 @@ input[type="reset"]{
 		 			<img src="5077979.png" alt="Cinque Terre" width="50" height="50">
 		 			<div class="desc"><a href="sandow.jsp">Sandow</a></div>
 		 			<img src="jeans-icon-noto-emoji-clothing-objects-iconset-google-893246.png" alt="Cinque Terre" width="50" height="50">
-		 			<div class="desc"><a href="jeans.jsp">Jeans</a></div>
+		 			<div class="desc"><a href="jeans_product.jsp">Jeans</a></div>
 		 			<img src="sticker-template-with-casual-shorts-isolated_1308-61526.jpg" alt="Cinque Terre" width="50" height="50">
 		 			<div class="desc"><a href="short_pants.jsp">Short Pants</a></div>
 		 			<img src="t-shirt-59.png" alt="Cinque Terre" width="50" height="50">
@@ -212,7 +212,8 @@ input[type="reset"]{
 				<input type="text" name="product_price" placeholder="Product Price">
 				
 			<label>Product Description</label>
-				<textarea placeholder="Product Description" rows="5" cols="50" name="product_description"></textarea>
+				<textarea placeholder="Product Size Availables 
+				Product Colours Availables" rows="5" cols="50" name="product_description" style="height:70px;"></textarea>
 				
 			<label>Jeans Image</label>
 				<input type="file" name="product_image" placeholder="Choose Image">

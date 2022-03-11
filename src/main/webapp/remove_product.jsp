@@ -212,7 +212,8 @@ input[type="reset"]{
 				<input type="text" name="product_price" placeholder="Product Price">
 				
 			<label>Product Description</label>
-				<textarea placeholder="Product Description" rows="5" cols="50" name="product_description"></textarea>
+				<textarea placeholder="Product Size Availables 
+				Product Colours Availables" rows="5" cols="50" name="product_description" style="height:70px;"></textarea>
 				
 			<label>Jeans Image</label>
 				<input type="file" name="product_image" placeholder="Choose Image">
