@@ -39,7 +39,7 @@ table{
 					
 				%>
 				
-					<td><img src="product_image/<%=img%>" height="100px" width="100px"><br>
+					<td><img src="product_image/jpg<%=img%>" height="100px" width="100px"><br>
 					Brand Name=<%=name %><br>Price=<%=price %><br>Product Details=<%=dec%>
 					</td>
 				
